@@ -1,0 +1,201 @@
+/* body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(234, 202, 121);
+    text-align: center;
+}
+h2{
+    text-align: center;
+    background-color: lightcoral;
+    color: white;
+    padding: .5rem;
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+}
+p{
+    text-align: center;
+}
+
+.gameContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game{
+    width: 70%;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.box{
+    width: 30%;
+    height: 20vh;
+    background-color: rgb(255, 234, 183);
+    border:none;
+    border-radius: 1rem;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.163);
+    text-align: center;
+    align-content: center;
+    font-size: 3rem;
+}
+
+.newGame,.resetGame,.restart{
+    border: none;
+    padding: 2% 3%;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    background-color: rgb(107, 55, 18);
+    color: white;
+    text-align: center;
+    margin-bottom: 80vh;
+    box-shadow: 0 0 2px rgb(110, 48, 4);
+}
+
+.resetGame{
+    margin: 3vh 0;
+    padding: 2% 5%;
+}
+
+.restart{
+    margin-bottom: 3vh;
+}
+
+
+.hideNewGame,.hideResetGame,.hideRestart{
+    display:none;
+}
+ */
+
+ /* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Game Title */
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Game Message */
+p {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Game Container */
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Tic-Tac-Toe Grid */
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    background: #222;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Box Styling */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border-radius: 8px;
+    user-select: none;  
+    outline: none;  
+}
+
+.box:hover {
+    background-color: #ddd;
+}
+
+.box:active {
+    transform: scale(0.95);
+}
+
+/* Buttons Styling */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* New Game & Reset Button */
+.newGame, .resetGame {
+    background-color: #007BFF;
+    color: white;
+    margin: 10px;
+}
+
+.newGame:hover, .resetGame:hover {
+    background-color: #0056b3;
+}
+
+/* Hide New Game Button Initially */
+.hideNewGame,.hideResetGame {
+    display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .game {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .box {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
